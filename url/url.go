@@ -35,7 +35,7 @@ func Shorten(ctx context.Context, p *ShortenParams) (*URL, error) {
 //
 //encore:api public method=GET path=/url/:id
 func Get(ctx context.Context, id string) (*URL, error) {
-	u := &URL{ID: id}
+	u := &URL{ID: id, Message: "Regards!"}
 	err := sqldb.QueryRow(ctx, `
 		SELECT original_url FROM url
 		WHERE id = $1

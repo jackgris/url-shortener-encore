@@ -28,7 +28,7 @@ func Shorten(ctx context.Context, p *ShortenParams) (*URL, error) {
 	} else if err := insert(ctx, id, p.URL); err != nil {
 		return nil, err
 	}
-	return &URL{ID: id, URL: p.URL}, nil
+	return &URL{ID: id, URL: p.URL, Message: "Regards"}, nil
 }
 
 // Get retrieves the original URL for the id.

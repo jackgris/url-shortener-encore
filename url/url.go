@@ -9,8 +9,9 @@ import (
 )
 
 type URL struct {
-	ID  string // short-form URL id
-	URL string // complete URL, in long form
+	ID      string // short-form URL id
+	URL     string // complete URL, in long form
+	Message string // Only for test deployment in encore
 }
 
 type ShortenParams struct {
